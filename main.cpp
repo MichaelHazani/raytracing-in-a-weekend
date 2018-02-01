@@ -1,15 +1,20 @@
 #include <iostream>
 #include <fstream>
+#include <math.h>
+#include <stdlib.h>
+#include "vec3.h"
+
 
 int main() {
-  
+
   // create stream, open file
   std::ofstream myfile("hello.ppm");
-    
+
   int nx = 200;
   int ny = 100;
   myfile << "P3\n" << nx << " " << ny << "\n255\n";
-  
+
+
   for (int j = ny-1; j >= 0; j--) {
     for (int i = 0; i < nx; i++){
       float r= float(i) / float(nx);
